@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="HTTP/2 binary framing example">
+  <defs>
+    <style>
+      .box{fill:#ecfeff;stroke:#06b6d4;stroke-width:2}
+      .title{font:700 18px system-ui, -apple-system, Segoe UI, Roboto, Arial}
+      .label{font:600 13px system-ui, -apple-system, Segoe UI, Roboto, Arial}
+      .mono{font:600 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+    </style>
+  </defs>
+  <rect x="20" y="20" width="680" height="380" fill="#ffffff" stroke="#e5e7eb"/>
+  <text x="30" y="48" class="title">HTTP/2 Framing (simplified)</text>
+
+  <!-- Frame layout -->
+  <rect class="box" x="60" y="90" width="600" height="46" rx="8"/>
+  <text x="70" y="118" class="mono">Frame Header: Length | Type | Flags | R | Stream Identifier</text>
+
+  <rect class="box" x="60" y="150" width="600" height="190" rx="8"/>
+  <text x="70" y="178" class="mono">Frame Payload: HPACK-Compressed Headers / Data</text>
+
+  <!-- Stream multiplexing stripes -->
+  <rect x="70" y="200" width="580" height="12" fill="#cffafe"/>
+  <rect x="70" y="220" width="580" height="12" fill="#e0f2fe"/>
+  <rect x="70" y="240" width="580" height="12" fill="#fee2e2"/>
+  <rect x="70" y="260" width="580" height="12" fill="#fef9c3"/>
+  <rect x="70" y="280" width="580" height="12" fill="#dcfce7"/>
+  <text x="70" y="320" class="label">Multiple streams interleave over one TCP connection (H2)</text>
+</svg>

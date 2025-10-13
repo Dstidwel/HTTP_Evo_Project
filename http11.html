@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <title>HTTP/1.1 — HTTP Evolution</title>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <nav class="site-nav" aria-label="Main">
+    <a class="logo" href="index.html" aria-label="Go to home">HTTP Evolution</a>
+    <ul>
+      <li><a href="index.html">Home</a></li><li><a href="concepts.html">Key Concepts</a></li><li><a href="http0-1.html">HTTP/0.9–1.0</a></li><li><a href="http11.html" class="active" aria-current="page">HTTP/1.1</a></li><li><a href="http2.html">HTTP/2</a></li><li><a href="http3.html">HTTP/3</a></li><li><a href="references.html">References</a></li><li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <main id="content" class="container">
+    <article class="card">
+      <h1>HTTP/1.1 — Backbone of the Early Web</h1>
+      <p>HTTP/1.1 stabilized semantics and performance for the early modern web.</p>
+      <h2>Highlights</h2>
+      <ul>
+        <li><strong>Persistent connections</strong> and pipelining reduce connection churn.</li>
+        <li><strong>Host header</strong> enables virtual hosting on shared IPs.</li>
+        <li><strong>Chunked transfer</strong> streams unknown-length responses.</li>
+        <li><strong>Cache directives</strong> improve freshness and efficiency.</li>
+        <li><strong>Content negotiation</strong> supports language and format variants.</li>
+      </ul>
+      <h2>Limitations</h2>
+      <p>TCP head-of-line blocking and serialized behavior under loss kept latency high for asset-heavy pages.</p>
+    </article>
+
+    <figure class="card">
+      <img src="images/protocol_stack.svg" alt="Protocol stack with HTTP, TLS, TCP, and network layers">
+      <figcaption>HTTP/1.1 runs over TCP; security added via TLS (HTTPS).</figcaption>
+    </figure>
+  </main>
+  <footer class="site-footer">
+    <p>Class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">IT 3203: Intro to Web Development</a> — Milestone #1.</p>
+    <p>© 2025 Derek J. Stidwell Jr. • <a href="#top">Back to top</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <title>HTTP/0.9 & 1.0 — HTTP Evolution</title>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <nav class="site-nav" aria-label="Main">
+    <a class="logo" href="index.html" aria-label="Go to home">HTTP Evolution</a>
+    <ul>
+      <li><a href="index.html">Home</a></li><li><a href="concepts.html">Key Concepts</a></li><li><a href="http0-1.html" class="active" aria-current="page">HTTP/0.9–1.0</a></li><li><a href="http11.html">HTTP/1.1</a></li><li><a href="http2.html">HTTP/2</a></li><li><a href="http3.html">HTTP/3</a></li><li><a href="references.html">References</a></li><li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <main id="content" class="container">
+    <article class="card">
+      <h1>HTTP/0.9 → HTTP/1.0</h1>
+      <p><strong>HTTP/0.9</strong> was a single-command protocol primarily for fetching HTML. No headers, no status codes, and only raw document responses.</p>
+      <p><strong>HTTP/1.0 (RFC 1945)</strong> generalized HTTP with headers, MIME types, and status codes, enabling images, styles, and rich media. Backward compatibility eased adoption.</p>
+      <h2>Key Differences</h2>
+      <table class="compare">
+        <thead>
+          <tr><th>Aspect</th><th>HTTP/0.9</th><th>HTTP/1.0</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Message Format</td><td>Plain HTML only</td><td>Headers + body</td></tr>
+          <tr><td>Status Codes</td><td>None</td><td>Standardized (e.g., 200, 404)</td></tr>
+          <tr><td>Media Types</td><td>HTML</td><td>MIME types (images, etc.)</td></tr>
+          <tr><td>Caching</td><td>—</td><td>Header-driven caching (basic)</td></tr>
+          <tr><td>Connections</td><td>One request/connection</td><td>Typically non-persistent</td></tr>
+        </tbody>
+      </table>
+    </article>
+
+    <aside class="card">
+      <h3>Why the Change Mattered</h3>
+      <ul>
+        <li>Enabled rich media and better content negotiation</li>
+        <li>Introduced consistent semantics via status codes</li>
+        <li>Laid groundwork for caching and proxies</li>
+      </ul>
+    </aside>
+  </main>
+  <footer class="site-footer">
+    <p>Class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">IT 3203: Intro to Web Development</a> — Milestone #1.</p>
+    <p>© 2025 Derek J. Stidwell Jr. • <a href="#top">Back to top</a></p>
+  </footer>
+</body>
+</html>

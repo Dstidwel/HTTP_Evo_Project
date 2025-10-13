@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <title>HTTP/2 — HTTP Evolution</title>
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <nav class="site-nav" aria-label="Main">
+    <a class="logo" href="index.html" aria-label="Go to home">HTTP Evolution</a>
+    <ul>
+      <li><a href="index.html">Home</a></li><li><a href="concepts.html">Key Concepts</a></li><li><a href="http0-1.html">HTTP/0.9–1.0</a></li><li><a href="http11.html">HTTP/1.1</a></li><li><a href="http2.html" class="active" aria-current="page">HTTP/2</a></li><li><a href="http3.html">HTTP/3</a></li><li><a href="references.html">References</a></li><li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <main id="content" class="container">
+    <article class="card">
+      <h1>HTTP/2 — Multiplexing & Compression</h1>
+      <p>HTTP/2 introduces a binary framing layer and <strong>multiplexing</strong> multiple streams over one connection while using <strong>HPACK</strong> to compress repetitive headers.</p>
+      <h2>Core Features</h2>
+      <ul>
+        <li>One TCP connection per origin with interleaved streams</li>
+        <li>Header compression reduces overhead</li>
+        <li>Server Push (experimental; deprecated in most browsers)</li>
+      </ul>
+      <h2>Tradeoffs</h2>
+      <p>Still rides on TCP, so packet loss can impact all streams (transport-level HOL blocking).</p>
+    </article>
+
+    <figure class="card">
+      <img src="images/http2_frame.svg" alt="Simplified HTTP/2 frame header and multiplexed streams">
+      <figcaption>Binary framing allows parallel streams on a single TCP connection.</figcaption>
+    </figure>
+  </main>
+  <footer class="site-footer">
+    <p>Class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">IT 3203: Intro to Web Development</a> — Milestone #1.</p>
+    <p>© 2025 Derek J. Stidwell Jr. • <a href="#top">Back to top</a></p>
+  </footer>
+</body>
+</html>
