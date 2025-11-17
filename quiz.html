@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8" />
+  <title>Quiz — HTTP Evolution</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Main site styles -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Extra quiz + polish styles -->
+  <link rel="stylesheet" href="quiz.css" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- Shared navigation -->
+  <nav class="site-nav" aria-label="Main">
+    <a class="logo" href="index.html" aria-label="Go to home">HTTP Evolution</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="concepts.html">Key Concepts</a></li>
+      <li><a href="http0-1.html">HTTP/0.9–1.0</a></li>
+      <li><a href="http11.html">HTTP/1.1</a></li>
+      <li><a href="http2.html">HTTP/2</a></li>
+      <li><a href="http3.html">HTTP/3</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="quiz.html" class="active" aria-current="page">Quiz</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main id="content" class="container">
+    <section class="card quiz-card">
+      <div class="quiz-hero">
+        <h1>HTTP Evolution — Self-Assessment Quiz</h1>
+        <p class="quiz-tagline">
+          Test what you’ve learned about HTTP/0.9, HTTP/1.1, HTTP/2, and HTTP/3 after exploring the other pages.
+        </p>
+        <div class="quiz-meta">
+          <span>5 Questions</span>
+          <span>100 Points Total</span>
+          <span>Pass mark: 70%</span>
+        </div>
+      </div>
+
+      <form id="quiz-form" class="quiz-form" aria-describedby="quiz-desc" novalidate>
+        <p id="quiz-desc" class="quiz-small">
+          This quiz contains <strong>1 fill-in-the-blank</strong>, <strong>3 single-choice</strong>, and
+          <strong>1 multi-select</strong> question. Choose the best answers and click <em>Submit</em>.
+        </p>
+
+        <div class="quiz-form-grid">
+
+          <!-- Q1: Fill in the blank -->
+          <fieldset>
+            <legend>Q1 — HTTP/2 Feature</legend>
+            <div class="quiz-q-header">
+              <span>Fill in the blank</span>
+              <span class="quiz-points">20 pts</span>
+            </div>
+            <label class="quiz-label" for="q1">
+              HTTP/2 introduced a key feature called <em>__________</em> which lets multiple streams share one TCP
+              connection and reduces application-level head-of-line blocking.
+            </label>
+            <input id="q1" name="q1" class="quiz-input" placeholder="Type your answer…" autocomplete="off" />
+            <p class="quiz-help">Hint: Starts with “multi-” and ends with “-plexing”.</p>
+          </fieldset>
+
+          <!-- Q2: Single choice -->
+          <fieldset>
+            <legend>Q2 — HTTP/0.9 Basics</legend>
+            <div class="quiz-q-header">
+              <span>Single choice</span>
+              <span class="quiz-points">20 pts</span>
+            </div>
+            <p class="quiz-label">
+              Which statement best describes HTTP/0.9?
+            </p>
+            <label class="quiz-option">
+              <input type="radio" name="q2" value="a">
+              <span>It supported multiple methods, headers, and status codes.</span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q2" value="b">
+              <span>It returned only a simple HTML document body with no headers.</span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q2" value="c">
+              <span>It was a binary protocol running on top of UDP.</span>
+            </label>
+          </fieldset>
+
+          <!-- Q3: Single choice -->
+          <fieldset>
+            <legend>Q3 — HTTP/1.1 Improvement</legend>
+            <div class="quiz-q-header">
+              <span>Single choice</span>
+              <span class="quiz-points">20 pts</span>
+            </div>
+            <p class="quiz-label">
+              Which feature was a major performance improvement introduced by HTTP/1.1?
+            </p>
+            <label class="quiz-option">
+              <input type="radio" name="q3" value="a">
+              <span>Mandatory TLS encryption for all responses.</span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q3" value="b">
+              <span>Persistent connections and the <code>Connection: keep-alive</code> behavior.</span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q3" value="c">
+              <span>Built-in support for QUIC and UDP.</span>
+            </label>
+          </fieldset>
+
+          <!-- Q4: Single choice -->
+          <fieldset>
+            <legend>Q4 — HTTP/3 Transport</legend>
+            <div class="quiz-q-header">
+              <span>Single choice</span>
+              <span class="quiz-points">20 pts</span>
+            </div>
+            <p class="quiz-label">
+              Which pairing correctly describes HTTP/3 and its underlying transport?
+            </p>
+            <label class="quiz-option">
+              <input type="radio" name="q4" value="a">
+              <span>HTTP/3 over TCP with HPACK header compression.</span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q4" value="b">
+              <span>HTTP/3 over QUIC, which runs on top of UDP.</span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="q4" value="c">
+              <span>HTTP/3 is just HTTP/2 with a new version number.</span>
+            </label>
+          </fieldset>
+
+          <!-- Q5: Multi-select -->
+          <fieldset>
+            <legend>Q5 — QUIC & HTTP/3</legend>
+            <div class="quiz-q-header">
+              <span>Multi-select (choose all that apply)</span>
+              <span class="quiz-points">20 pts</span>
+            </div>
+            <p class="quiz-label">
+              Which statements about QUIC (used by HTTP/3) are true?
+            </p>
+            <label class="quiz-option">
+              <input type="checkbox" name="q5" value="a">
+              <span>QUIC integrates TLS 1.3 into the transport handshake.</span>
+            </label>
+            <label class="quiz-option">
+              <input type="checkbox" name="q5" value="b">
+              <span>QUIC allows a connection to survive IP changes (for example, switching from Wi-Fi to cellular).</span>
+            </label>
+            <label class="quiz-option">
+              <input type="checkbox" name="q5" value="c">
+              <span>QUIC is still affected by TCP head-of-line blocking between streams.</span>
+            </label>
+            <label class="quiz-option">
+              <input type="checkbox" name="q5" value="d">
+              <span>QUIC is designed to reduce latency, especially on lossy or mobile networks.</span>
+            </label>
+            <p class="quiz-help">Hint: More than one option is correct.</p>
+          </fieldset>
+        </div>
+
+        <div class="quiz-buttons">
+          <button id="quiz-submit" type="submit" class="quiz-btn">Submit Quiz</button>
+          <button id="quiz-reset" type="button" class="quiz-btn quiz-btn-secondary">Reset / Retake</button>
+        </div>
+
+        <div class="quiz-small">
+          <div class="quiz-progress" aria-hidden="true">
+            <div id="quiz-progress-bar" class="quiz-progress-bar"></div>
+          </div>
+          <span id="quiz-progress-label">0 / 5 questions answered</span>
+        </div>
+      </form>
+
+      <section id="quiz-results" class="quiz-results" aria-live="polite">
+        <div id="quiz-overall" class="quiz-overall"></div>
+        <div id="quiz-per-question"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Class project for IT 3203 — Intro to Web Development • Milestone #2.</p>
+    <p>© 2025 Derek J. Stidwell Jr. • <a href="#top">Back to top</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      const form = document.getElementById('quiz-form');
+      if (!form) return;
+
+      const KEY = {
+        q1: 'multiplexing',
+        q2: 'b',
+        q3: 'b',
+        q4: 'b',
+        q5: ['a', 'b', 'd']
+      };
+
+      const POINTS = 20;
+      const PASS_MARK = 70;
+
+      const progressBar = document.getElementById('quiz-progress-bar');
+      const progressLabel = document.getElementById('quiz-progress-label');
+
+      function normalize(text) {
+        return (text || '').trim().toLowerCase().replace(/\\s+/g, ' ');
+      }
+
+      function getAnsweredCount() {
+        let count = 0;
+
+        // Q1
+        if (normalize(document.getElementById('q1').value)) count++;
+
+        // Q2–Q4
+        ['q2', 'q3', 'q4'].forEach(id => {
+          if (form.querySelector('input[name="' + id + '"]:checked')) count++;
+        });
+
+        // Q5
+        if (form.querySelectorAll('input[name="q5"]:checked').length > 0) count++;
+
+        return count;
+      }
+
+      function updateProgress() {
+        const answered = getAnsweredCount();
+        const total = 5;
+        const pct = (answered / total) * 100;
+        if (progressBar) {
+          progressBar.style.width = pct + '%';
+        }
+        if (progressLabel) {
+          progressLabel.textContent = answered + ' / ' + total + ' questions answered';
+        }
+      }
+
+      function grade() {
+        let total = 0;
+        const details = [];
+
+        // Q1
+        const q1Val = normalize(document.getElementById('q1').value);
+        const q1Correct = q1Val === normalize(KEY.q1);
+        if (q1Correct) total += POINTS;
+        details.push({
+          id: 'Q1',
+          correct: q1Correct,
+          your: document.getElementById('q1').value,
+          ans: KEY.q1
+        });
+
+        // Q2–Q4
+        ['q2', 'q3', 'q4'].forEach(id => {
+          const chosen = form.querySelector('input[name="' + id + '"]:checked');
+          const val = chosen ? chosen.value : '';
+          const correct = val === KEY[id];
+          if (correct) total += POINTS;
+          details.push({
+            id: id.toUpperCase(),
+            correct,
+            your: val || '—',
+            ans: KEY[id]
+          });
+        });
+
+        // Q5
+        const selected = Array.from(form.querySelectorAll('input[name="q5"]:checked'))
+          .map(input => input.value)
+          .sort();
+        const target = [...KEY.q5].sort();
+        const multiCorrect =
+          selected.length === target.length &&
+          selected.every((val, index) => val === target[index]);
+        if (multiCorrect) total += POINTS;
+        details.push({
+          id: 'Q5',
+          correct: multiCorrect,
+          your: selected.length ? selected.join(', ') : '—',
+          ans: target.join(', ')
+        });
+
+        showResults(total, details);
+      }
+
+      function showResults(total, details) {
+        const results = document.getElementById('quiz-results');
+        const overall = document.getElementById('quiz-overall');
+        const perQuestion = document.getElementById('quiz-per-question');
+
+        const pass = total >= PASS_MARK;
+        const correctCount = Math.round(total / POINTS);
+
+        overall.innerHTML = `
+          <div class="quiz-kv">
+            <div>
+              <strong>Status:</strong>
+              <span class="quiz-badge ${pass ? 'quiz-badge-pass' : 'quiz-badge-fail'}">
+                ${pass ? 'PASS' : 'FAIL'}
+              </span>
+            </div>
+            <div><strong>Total Score:</strong> ${total} / 100</div>
+            <div><strong>Questions correct:</strong> ${correctCount} / 5</div>
+          </div>
+          <p class="quiz-small">
+            Review your answers below. Correct answers are highlighted in blue. Use the Reset button to retake the quiz.
+          </p>
+        `;
+
+        perQuestion.innerHTML = '';
+        details.forEach(d => {
+          const block = document.createElement('article');
+          block.className =
+            'quiz-feedback ' + (d.correct ? 'quiz-feedback-correct' : 'quiz-feedback-incorrect');
+          block.innerHTML = `
+            <div class="quiz-question-id">${d.id}</div>
+            <p><strong>Result:</strong> ${d.correct ? 'Correct ✅' : 'Incorrect ❌'}</p>
+            <p><strong>Your answer:</strong> ${d.your || '—'}</p>
+            <p><strong>Correct answer:</strong> <span class="quiz-answer-key">${d.ans}</span></p>
+          `;
+          perQuestion.appendChild(block);
+        });
+
+        results.classList.add('show');
+        document.getElementById('quiz-submit').disabled = true;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        grade();
+      });
+
+      document.getElementById('quiz-reset').addEventListener('click', function () {
+        form.reset();
+        const results = document.getElementById('quiz-results');
+        const perQuestion = document.getElementById('quiz-per-question');
+        const overall = document.getElementById('quiz-overall');
+        results.classList.remove('show');
+        perQuestion.innerHTML = '';
+        overall.innerHTML = '';
+        document.getElementById('quiz-submit').disabled = false;
+        if (document.getElementById('q1')) {
+          document.getElementById('q1').focus();
+        }
+        updateProgress();
+      });
+
+      // Update progress when user interacts
+      form.addEventListener('change', updateProgress);
+      form.addEventListener('input', updateProgress);
+      updateProgress();
+    })();
+  </script>
+</body>
+</html>
