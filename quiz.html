@@ -1,204 +1,86 @@
-<!doctype html>
-<html lang="en" id="top">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Quiz — HTTP Evolution</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Self‑Assessment Quiz — HTTP/2 & QUIC</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
+  
+<nav role="navigation" aria-label="Main">
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <a href="resources.html">Resources</a>
+    <a href="quiz.html">Quiz</a>
+  </div>
+</nav>
 
-  <!-- NAVIGATION -->
-  <nav class="site-nav" aria-label="Main">
-    <a class="logo" href="index.html" aria-label="Go to home">HTTP Evolution</a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="concepts.html">Key Concepts</a></li>
-      <li><a href="http0-1.html">HTTP/0.9–1.0</a></li>
-      <li><a href="http11.html">HTTP/1.1</a></li>
-      <li><a href="http2.html">HTTP/2</a></li>
-      <li><a href="http3.html">HTTP/3</a></li>
-      <li><a href="references.html">References</a></li>
-      <li><a href="quiz.html" class="active" aria-current="page">Quiz</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+  <main class="container">
+    <section class="card">
+      <h1>Self‑Assessment Quiz</h1>
+      <p class="small">All questions are based on the HTTP/2 & QUIC materials. Submit to see instant results, per‑question feedback, and your total score. Use <em>Reset</em> to retake.</p>
+      <form class="quiz" novalidate aria-describedby="quiz-desc">
+        <p id="quiz-desc" class="small">Contains: one fill‑in‑the‑blank, three single‑choice, and one multi‑select question.</p>
 
-  <!-- MAIN CONTENT -->
-  <main id="content" class="container">
-    <section class="card quiz-card">
-      <h1>HTTP Evolution — Self-Assessment Quiz</h1>
-
-      <p class="quiz-small">
-        This quiz checks your understanding of how HTTP evolved from 0.9 to HTTP/3.
-        After answering all questions, click <strong>Submit</strong> to see your full score,
-        per-question feedback, and PASS/FAIL status. Click <strong>Reset</strong> to take it again.
-      </p>
-
-      <!-- QUIZ FORM -->
-      <form id="quiz-form" class="quiz-form">
-
-        <!-- Q1 TEXT -->
         <fieldset>
           <legend>Q1 — Fill in the blank (20 pts)</legend>
-          <label class="quiz-label" for="q1">
-            HTTP/2 introduced __________, which allows multiple streams to share one TCP connection.
-          </label>
-          <input id="q1" name="q1" class="quiz-input" placeholder="Enter your answer…" />
+          <label class="label" for="q1">Name the DOM API commonly used to select the <code>first</code> matching element via a CSS selector:</label>
+          <input id="q1" name="q1" class="input" placeholder="Type your answer…" autocomplete="off" required>
+          <div class="small">Hint: It starts with <code>document.</code></div>
         </fieldset>
 
-        <!-- Q2 RADIO -->
         <fieldset>
           <legend>Q2 — Single choice (20 pts)</legend>
-          <span class="quiz-label">How did HTTP/0.9 structure responses?</span>
-          <label><input type="radio" name="q2" value="a"> HTML + JSON metadata</label><br>
-          <label><input type="radio" name="q2" value="b"> Binary frames with headers</label><br>
-          <label><input type="radio" name="q2" value="c"> A single line of HTML, no headers</label>
+          <span class="label">In HTTP/2, what feature allows multiple streams over a single connection?</span>
+          <label><input type="radio" class="radio" name="q2" value="a"> Server Push</label><br>
+          <label><input type="radio" class="radio" name="q2" value="b"> Multiplexing</label><br>
+          <label><input type="radio" class="radio" name="q2" value="c"> HPACK</label>
         </fieldset>
 
-        <!-- Q3 RADIO -->
         <fieldset>
           <legend>Q3 — Single choice (20 pts)</legend>
-          <span class="quiz-label">What made HTTP/1.1 faster than HTTP/1.0?</span>
-          <label><input type="radio" name="q3" value="a"> Required encryption for all sites</label><br>
-          <label><input type="radio" name="q3" value="b"> Persistent connections / keep-alive</label><br>
-          <label><input type="radio" name="q3" value="c"> QUIC transport</label>
+          <span class="label">What transport does QUIC primarily use?</span>
+          <label><input type="radio" class="radio" name="q3" value="a"> UDP</label><br>
+          <label><input type="radio" class="radio" name="q3" value="b"> TCP</label><br>
+          <label><input type="radio" class="radio" name="q3" value="c"> SCTP</label>
         </fieldset>
 
-        <!-- Q4 RADIO -->
         <fieldset>
           <legend>Q4 — Single choice (20 pts)</legend>
-          <span class="quiz-label">Which pairing is correct for HTTP/3?</span>
-          <label><input type="radio" name="q4" value="a"> Uses TCP + HPACK</label><br>
-          <label><input type="radio" name="q4" value="b"> Runs over QUIC (UDP)</label><br>
-          <label><input type="radio" name="q4" value="c"> Same as HTTP/2</label>
+          <span class="label">Which statement is TRUE about HTTP/2 header compression?</span>
+          <label><input type="radio" class="radio" name="q4" value="a"> It uses Brotli for all headers.</label><br>
+          <label><input type="radio" class="radio" name="q4" value="b"> It disables compression for security.</label><br>
+          <label><input type="radio" class="radio" name="q4" value="c"> It uses HPACK to reduce redundancy.</label>
         </fieldset>
 
-        <!-- Q5 MULTI -->
         <fieldset>
-          <legend>Q5 — Multi-select (20 pts)</legend>
-          <span class="quiz-label">Which statements are TRUE about QUIC?</span>
-          <label><input type="checkbox" name="q5" value="a"> Integrates TLS 1.3</label><br>
-          <label><input type="checkbox" name="q5" value="b"> Supports IP migration</label><br>
-          <label><input type="checkbox" name="q5" value="c"> Suffers TCP head-of-line blocking</label><br>
-          <label><input type="checkbox" name="q5" value="d"> Designed to reduce latency</label>
+          <legend>Q5 — Multi‑select (20 pts)</legend>
+          <span class="label">Select ALL benefits closely associated with QUIC:</span>
+          <label><input type="checkbox" class="checkbox" name="q5" value="a"> Faster connection establishment (0‑RTT/TLS 1.3)</label><br>
+          <label><input type="checkbox" class="checkbox" name="q5" value="b"> Mandatory server push for all requests</label><br>
+          <label><input type="checkbox" class="checkbox" name="q5" value="c"> Uses TCP at the transport layer</label><br>
+          <label><input type="checkbox" class="checkbox" name="q5" value="d"> Stream‑level independence reduces head‑of‑line blocking</label>
         </fieldset>
 
-        <div class="quiz-buttons">
-          <button id="quiz-submit" type="submit" class="quiz-btn">Submit Quiz</button>
-          <button id="quiz-reset" type="button" class="quiz-btn quiz-btn-secondary">Reset / Retake</button>
+        <div class="kv">
+          <button id="submitBtn" class="btn" type="submit" aria-describedby="score-note">Submit Quiz</button>
+          <button id="resetBtn" class="btn secondary" type="button">Reset / Retake</button>
         </div>
-
+        <div id="score-note" class="small">You’ll see total score, pass/fail, and per‑question feedback below immediately after submission.</div>
       </form>
+    </section>
 
-      <!-- RESULTS -->
-      <section id="quiz-results" class="quiz-results">
-        <div id="quiz-overall" class="quiz-overall"></div>
-        <div id="quiz-per-question"></div>
-      </section>
+    <section id="results" class="result">
+      <h2>Results</h2>
+      <div id="overall" class=""></div>
+      <div id="per-question" style="margin-top:16px;"></div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <p>IT 3203 — Milestone #2 • © 2025 Derek Stidwell</p>
-    <p><a href="#top">Back to top</a></p>
+  <footer class="container">
+    <div class="small">Need a refresher? Visit <a href="resources.html">Resources</a>.</div>
   </footer>
-
-  <!-- QUIZ LOGIC -->
-  <script>
-  (function() {
-    const form = document.getElementById('quiz-form');
-    if (!form) return;
-
-    const KEY = {
-      q1: "multiplexing",
-      q2: "c",
-      q3: "b",
-      q4: "b",
-      q5: ["a","b","d"]
-    };
-
-    function normalize(s){ return (s||"").trim().toLowerCase(); }
-
-    function grade(){
-      let total = 0;
-      const details = [];
-
-      // Q1
-      const q1 = normalize(document.getElementById('q1').value);
-      const ok1 = q1 === KEY.q1;
-      if(ok1) total += 20;
-      details.push({id:"Q1", correct:ok1, your:q1, ans:KEY.q1});
-
-      // Q2–Q4
-      ["q2","q3","q4"].forEach(id=>{
-        const chosen = form.querySelector(`input[name="${id}"]:checked`);
-        const val = chosen ? chosen.value : "";
-        const ok = val === KEY[id];
-        if(ok) total += 20;
-        details.push({id:id.toUpperCase(),correct:ok,your:val,ans:KEY[id]});
-      });
-
-      // Q5
-      const selected = Array.from(form.querySelectorAll('input[name="q5"]:checked'))
-                       .map(c=>c.value).sort();
-      const correct = [...KEY.q5].sort();
-      const ok5 = JSON.stringify(selected) === JSON.stringify(correct);
-      if(ok5) total += 20;
-      details.push({id:"Q5",correct:ok5,your:selected.join(", "),ans:correct.join(", ")});
-
-      showResults(total, details);
-    }
-
-    function showResults(total, details){
-      const results = document.getElementById('quiz-results');
-      const overall = document.getElementById('quiz-overall');
-      const perQ = document.getElementById('quiz-per-question');
-
-      const pass = total >= 70;
-
-      overall.innerHTML = `
-        <div class="quiz-kv">
-          <div><strong>Status:</strong>
-            <span class="quiz-badge ${pass?'quiz-badge-pass':'quiz-badge-fail'}">
-              ${pass?'PASS':'FAIL'}
-            </span>
-          </div>
-          <div><strong>Total Score:</strong> ${total}/100</div>
-        </div>
-      `;
-
-      perQ.innerHTML = "";
-      details.forEach(d=>{
-        perQ.innerHTML += `
-          <div class="quiz-feedback ${d.correct?'quiz-feedback-correct':'quiz-feedback-incorrect'}">
-            <p><strong>${d.id}</strong> — ${d.correct?'Correct':'Incorrect'}</p>
-            <p><strong>Your answer:</strong> ${d.your || "—"}</p>
-            <p><strong>Correct answer:</strong> <span class="quiz-answer-key">${d.ans}</span></p>
-          </div>
-        `;
-      });
-
-      results.classList.add("show");
-      document.getElementById('quiz-submit').disabled = true;
-    }
-
-    form.addEventListener("submit", function(e){ e.preventDefault(); grade(); });
-
-    document.getElementById("quiz-reset").addEventListener("click", ()=>{
-      form.reset();
-      document.getElementById("quiz-submit").disabled = false;
-      document.getElementById("quiz-results").classList.remove("show");
-      document.getElementById("quiz-overall").innerHTML = "";
-      document.getElementById("quiz-per-question").innerHTML = "";
-      document.getElementById("q1").focus();
-    });
-
-  })();
-  </script>
-
+  <script src="script.js" defer></script>
 </body>
 </html>
