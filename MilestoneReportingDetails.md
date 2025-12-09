@@ -77,6 +77,13 @@ Live URL examples:
 ## JavaScript Enhancement
 - The lightweight script.js file adds the mobile menu toggle and complements the existing quiz logic from milestone 2
   it is linked in every html file using: """<script src="script.js" defer></script>"""
+
+## Testing Report
+- The HTTP Evolution website was thoroughly tested across multiple devices and screen resolutions to verify that all responsive design elements functioned correctly. On desktop displays such as a MacBook Pro (2560×1600 resolution) using Safari, the site displayed the full navigation menu horizontally, with all layout components centered and balanced. The hero section maintained high image quality, and no elements overlapped or extended beyond their containers.
+  
+- When tested on tablet screens like an iPad using Chrome (approximately 768 pixels wide), the website automatically adjusted its layout for medium-sized viewports. The navigation menu successfully collapsed into the new hamburger icon, allowing users to toggle the menu open or closed. Padding and text spacing decreased appropriately, creating a more compact but still readable design. The table and gallery elements restructured to fit the screen without any horizontal scrolling.
+  
+- On mobile devices such as an iPhone 13 (approximately 390 pixels wide), the responsive CSS and JavaScript enhancements worked seamlessly. The hamburger menu opened and closed smoothly with a tap, and buttons, links, and quiz controls adapted to full-width layouts for easier interaction. Text content remained legible without zooming, and no overflow or clipping occurred on any page. The quiz form operated normally, scoring answers correctly even on smaller screens. Across all devices and browsers, the website’s visual consistency, usability, and performance demonstrated successful implementation of responsive web design principles.
   
 ## Completion Statement
 
