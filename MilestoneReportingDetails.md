@@ -1,12 +1,16 @@
-# Milestone 2 Report — HTTP Evolution Project
+# Milestone Finish Report — HTTP Evolution Project
 
 **Student:** Derek J. Stidwell Jr.  
 **Course:** IT 3203 – Intro to Web Development  
-**Project:** HTTP Evolution (0.9 → HTTP/3) — Milestone 2
+**Project:** HTTP Evolution (0.9 → HTTP/3) — Milestones
 
 ---
 
-## 1. Quiz Functionality
+## Layout and Stucture
+The website includes **nine pages** (`index.html`, `concepts.html`, `http0-1.html`, `http11.html`, `http2.html`, `http3.html`, `references.html`, `quiz.html`, and `about.html`) plus a single combined stylesheet (`style.css`) and a small JavaScript file (`script.js`).  
+Every page follows a consistent layout using semantic HTML5 tags (`<header>`, `<main>`, `<footer>`) for accessibility and SEO compliance.
+
+## Quiz Functionality
 
 I added a complete quiz application (`quiz.html`) with:
 
@@ -26,7 +30,7 @@ All results appear **instantly on the same page** after submission.
 
 ---
 
-## 2. UI and Form Controls
+## UI and Form Controls
 
 The quiz uses:
 
@@ -39,7 +43,7 @@ The quiz uses:
 
 ---
 
-## 3. Styling Enhancements
+## Styling Enhancements
 
 I extended my Milestone 1 theme by adding quiz-specific styles:
 
@@ -54,7 +58,7 @@ Everything integrates smoothly with the existing theme.
 
 ---
 
-## 4. Deployment to GitHub Pages
+## Deployment to GitHub Pages
 
 The following files were added:
 
@@ -67,21 +71,16 @@ All files were uploaded to the repository root and automatically deployed via Gi
 Live URL examples:  
 - **Home:** `https://<username>.github.io/<repo>/index.html`  
 - **Quiz:** `https://<username>.github.io/<repo>/quiz.html`
-
 ---
 
-## 5. Screenshots (add after deployment)
 
-- Quiz before submission  
-- Quiz after submission  
-- Per-question feedback  
-- Reset state  
+## JavaScript Enhancement
+- The lightweight script.js file adds the mobile menu toggle and complements the existing quiz logic from milestone 2
+  it is linked in every html file using: """<script src="script.js" defer></script>"""
+  
+## Completion Statement
 
----
-
-## 6. Completion Statement
-
-All requirements of Milestone 2 were satisfied:
+All requirements of Milestones were satisfied:
 
 ✔ Quiz functionality  
 ✔ Correct form controls  
